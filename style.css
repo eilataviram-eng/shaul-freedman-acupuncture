@@ -165,7 +165,7 @@ nav {
 
 /* ── TESTIMONIAL ── */
 .testimonial { background: white; border-left: 4px solid var(--light-green); padding: 1.4rem 1.8rem; border-radius: 0 var(--radius) var(--radius) 0; box-shadow: var(--shadow); margin: 2rem 0; }
-.testimonial p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--text-dark); margin-bottom: 0.4rem; }
+.testimonial p { font-family: 'Cormorant Garamond', serif; font-style: normal; font-size: 1.1rem; color: var(--dark-green); font-weight: 300; margin-bottom: 0.4rem; letter-spacing: 0.01em; }
 .testimonial cite { font-size: 0.82rem; color: var(--text-light); font-style: normal; }
 
 /* ── FAQ ── */
