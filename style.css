@@ -245,15 +245,6 @@ footer a { color: var(--light-green); }
   color: #444;
   text-decoration: underline;
 }
-/* ═══════════════════════════════════════════════════════════════
-     INSTRUCTIONS FOR style.css:
-
-     1. Open style.css in GitHub
-     2. Scroll to the very bottom of the file
-     3. Paste everything below this instruction block at the end
-     4. Do not replace anything — just add to the bottom
-     5. Commit changes
-════════════════════════════════════════════════════════════════ */
 
 /* ── HERO: mobile image band ── */
 .hero-mobile-image { display: none; }
