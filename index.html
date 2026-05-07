@@ -61,41 +61,76 @@
 
 <div class="page-wrap">
 
+<!-- ═══════════════════════════════════════════════════════════════
+     INSTRUCTIONS FOR index.html:
+     
+     1. Open index.html in GitHub
+     2. Find this line (it's near the top of the page body):
+        <!-- HERO -->
+     3. Select everything from that comment all the way down to
+        the closing </section> tag that comes just before this:
+        <!-- WHAT CAN WE HELP WITH -->
+     4. Delete the selected block entirely
+     5. Paste everything below this instruction block in its place
+     6. Commit changes
+════════════════════════════════════════════════════════════════ -->
+
 <!-- HERO -->
-<section style="background:linear-gradient(135deg,#f2edd8 0%,#e8e2cc 60%,#f5f0de 100%);padding:5rem 0 4rem;position:relative;overflow:hidden;">
+<section class="hero-section" style="background:linear-gradient(135deg,#f2edd8 0%,#e8e2cc 60%,#f5f0de 100%);padding:3rem 0 4rem;position:relative;overflow:hidden;">
   <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(169,177,121,0.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
   <div class="container">
 
-    <!-- WHITE CARD wrapping both text and image -->
-    <div style="background:white;border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:2.5rem;max-width:1020px;margin:0 auto;">
-      <div class="grid-2-1" style="align-items:center;gap:3.5rem;">
+    <!-- WHITE CARD -->
+    <div style="background:white;border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden;max-width:1020px;margin:0 auto;">
 
-        <div>
-          <div style="display:inline-flex;align-items:center;gap:6px;background:var(--pale-green);color:var(--dark-green);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:20px;margin-bottom:1.5rem;">✦ Southern Suburbs, Cape Town · Est. 2001</div>
-          <h1>You don't have to live with constant pain or tension.</h1>
+      <!-- MOBILE ONLY: hero image + dark green band -->
+      <div class="hero-mobile-image">
+        <img
+          src="assets/relaxing-acupuncture-clinic-hero.webp"
+          alt="Woman relaxing during acupuncture treatment at Shaul Freedman's clinic in Cape Town"
+          style="width:100%;height:240px;object-fit:cover;object-position:center 30%;display:block;">
+        <div style="background:var(--dark-green);padding:0.75rem 1.5rem;">
+          <p style="color:var(--pale-green);font-size:0.78rem;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;margin:0;">✦ Acupuncture Clinic · Cape Town · Est. 2001</p>
+        </div>
+      </div>
 
-          <!-- Quotes: italics removed -->
-          <div style="font-family:'Cormorant Garamond',serif;font-style:normal;font-size:clamp(1rem,2vw,1.2rem);color:var(--text-mid);line-height:2.1;margin:1.5rem 0;">
+      <!-- MAIN GRID: text left, image right -->
+      <div class="grid-2-1" style="align-items:stretch;gap:0;">
+
+        <!-- TEXT COLUMN -->
+        <div style="padding:2.5rem;">
+
+          <!-- Desktop only badge -->
+          <div class="hero-desktop-badge" style="display:inline-flex;align-items:center;gap:6px;background:var(--pale-green);color:var(--dark-green);font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:20px;margin-bottom:1.25rem;">✦ Southern Suburbs, Cape Town · Est. 2001</div>
+
+          <h1 style="font-weight:400;color:var(--dark-green);margin-bottom:1.25rem;">You don't have to live with constant pain or tension.</h1>
+
+          <!-- Quotes: left border on both mobile and desktop -->
+          <div style="font-family:'Cormorant Garamond',serif;font-style:normal;font-size:clamp(0.95rem,2vw,1.15rem);color:var(--text-dark);line-height:2;margin-bottom:1.25rem;border-left:3px solid var(--pale-green);padding-left:1rem;">
             <span style="display:block;">"My back is killing me."</span>
             <span style="display:block;">"I'm exhausted, but I still can't sleep."</span>
             <span style="display:block;">"My hormones are all over the place!"</span>
             <span style="display:block;">"I've tried everything for these headaches… and nothing is working."</span>
           </div>
 
-          <p style="font-size:1.05rem;color:var(--text-mid);margin-bottom:1.5rem;">Gentle, experienced acupuncture support for pain, stress, sleep, fertility, pregnancy, women's health and chronic conditions - at a clinic established in Cape Town in 2001.</p>
+          <p style="font-size:1rem;color:var(--text-mid);margin-bottom:1.5rem;font-weight:400;">Gentle, experienced acupuncture support for pain, stress, sleep, fertility, pregnancy, women's health and chronic conditions — at a clinic established in Cape Town in 2001.</p>
 
-          <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+          <div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1.25rem;">
             <a href="https://wa.me/27847695776?text=Hi%20Shaul%2C%20I%27d%20like%20to%20book%20an%20acupuncture%20treatment." target="_blank" class="btn btn-wa"><svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Book a Treatment</a>
             <a href="tel:+27847695776" class="btn btn-outline">📞 084 769 5776</a>
           </div>
 
-          <a href="https://www.google.com/maps/search/?api=1&query=15+Searle+St,+Lansdowne,+Cape+Town" target="_blank" rel="noopener noreferrer" style="color:#4E7358;text-decoration:none;font-weight:500;">
+          <a href="https://www.google.com/maps/search/?api=1&query=15+Searle+St,+Lansdowne,+Cape+Town" target="_blank" rel="noopener noreferrer" style="color:#4E7358;text-decoration:none;font-weight:500;font-size:0.9rem;">
             📍 15 Searle St, Lansdowne, Cape Town
           </a>
         </div>
 
-        <div>
-          <img src="assets/relaxing-acupuncture-clinic-hero.webp" alt="Acupuncture treatment at Shaul Freedman's clinic in Cape Town" class="hero-img" style="width:100%;height:480px;object-fit:cover;object-position:center top;border-radius:var(--radius);box-shadow:var(--shadow-lg);">
+        <!-- DESKTOP IMAGE COLUMN -->
+        <div class="hero-desktop-image" style="min-height:480px;position:relative;overflow:hidden;">
+          <img
+            src="assets/relaxing-acupuncture-clinic-hero.webp"
+            alt="Woman relaxing during acupuncture treatment at Shaul Freedman's clinic in Cape Town"
+            style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;border-radius:0;">
         </div>
 
       </div>
@@ -229,8 +264,8 @@
         <p>He is not a clinic in the clinical sense. The space is warm and unhurried. Shaul is the kind of practitioner who listens properly, who can hold space for pain — physical and emotional — and who brings quiet wisdom to his work.</p>
         <p>Alongside his private practice, Shaul is deeply committed to accessible community care. For more than 13 years, he has been an integral part of the <strong>Flying Needle Project</strong> — a community-based initiative providing free acupuncture treatment to people who might not otherwise have access to this form of care.</p>
         <div class="testimonial">
-          <p>"Shaul has such a lovely energy and is a skillful acupuncturist. He really helped me."</p>
-          <cite>— E. Aviram</cite>
+          <p>"I've used Shaul's accupuncture services for 10+ years and Shaul has always been able to help my chronic conditions from anxiety, frozen shoulder, migraines to general pain relief. I highly recommend his gentle but very effective health services.."</p>
+          <cite>— Sumaya Adams</cite>
         </div>
         <a href="https://wa.me/27847695776?text=Hi%20Shaul%2C%20I%27d%20like%20to%20find%20out%20more%20about%20booking%20a%20treatment%20with%20you." target="_blank" class="btn btn-primary"><svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Book a session</a>
       </div>
@@ -322,8 +357,8 @@
     </div>
     <div class="grid-3">
       <div class="testimonial" style="margin:0;">
-        <p>"...."</p>
-        <cite>— ABC, Cape Town</cite>
+        <p>"After trying so many different treatments for my lower back and hip pain I decided to try acupuncture and cupping with Shaul and after the 1st 2 sessions I felt immediate relief. Shaul is very patient and listens to one's area of concern. I have recommended my dad and brother to Shaul as well because I believe he does an amazing job. I highly recommend his services, you won't regret it Thank you Shaul."</p>
+        <cite>— Zaki Parker, Cape Town</cite>
       </div>
       <div class="testimonial" style="margin:0;">
         <p>"...."</p>
