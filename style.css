@@ -245,3 +245,54 @@ footer a { color: var(--light-green); }
   color: #444;
   text-decoration: underline;
 }
+/* ═══════════════════════════════════════════════════════════════
+     INSTRUCTIONS FOR style.css:
+
+     1. Open style.css in GitHub
+     2. Scroll to the very bottom of the file
+     3. Paste everything below this instruction block at the end
+     4. Do not replace anything — just add to the bottom
+     5. Commit changes
+════════════════════════════════════════════════════════════════ */
+
+/* ── HERO: mobile image band ── */
+.hero-mobile-image { display: none; }
+.hero-desktop-image { display: block; }
+.hero-desktop-badge { display: inline-flex; }
+
+@media (max-width: 960px) {
+
+  /* Show mobile image + green band at top of card */
+  .hero-mobile-image { display: block; }
+
+  /* Hide desktop image column on mobile */
+  .hero-desktop-image { display: none !important; }
+
+  /* Hide desktop badge — replaced by the green band */
+  .hero-desktop-badge { display: none !important; }
+
+  /* Stack grid to single column */
+  .grid-2-1 { grid-template-columns: 1fr !important; }
+
+  /* Tighten text padding inside card on mobile */
+  .grid-2-1 > div:first-child { padding: 1.75rem !important; }
+
+  /* Pull section up so card sits close to the nav */
+  section.hero-section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Heavier, larger heading on mobile */
+  .grid-2-1 h1 {
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Stack buttons vertically on mobile for easier tapping */
+  .hero-btns {
+    flex-direction: column !important;
+  }
+}
