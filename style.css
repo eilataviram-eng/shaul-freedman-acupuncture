@@ -241,19 +241,6 @@ footer a { color: var(--light-green); }
   .block-body { padding: 1.8rem; }
 }
 
-/* RELATED LINK UNDER BUTTON */
-
-.related-link {
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-.related-link a {
-  color: #777;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
 .related-link a:hover {
   color: #444;
   text-decoration: underline;
